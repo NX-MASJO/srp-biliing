@@ -4,6 +4,7 @@ SRP Billing is a FiveM billing resource for QBCore. It provides player and job i
 
 ## Contents
 
+- [UI Preview](#ui-preview)
 - [Requirements](#requirements)
 - [Build the NUI](#build-the-nui)
 - [Install on a FiveM server](#install-on-a-fivem-server)
@@ -13,6 +14,24 @@ SRP Billing is a FiveM billing resource for QBCore. It provides player and job i
 - [In-game usage](#in-game-usage)
 - [Invoice and payment flow](#invoice-and-payment-flow)
 - [Troubleshooting](#troubleshooting)
+
+## UI Preview
+
+### Billing dashboard
+
+![Billing dashboard](https://r2.fivemanage.com/UklNyyeJlZnG7cX9yB0JW/Screenshot_1.png)
+
+### Invoice creation
+
+![Invoice creation](https://r2.fivemanage.com/UklNyyeJlZnG7cX9yB0JW/Screenshot_2.png)
+
+### Job template editor
+
+![Job template editor](https://r2.fivemanage.com/UklNyyeJlZnG7cX9yB0JW/Screenshot_3.png)
+
+### Usable receipt
+
+![Usable receipt](https://r2.fivemanage.com/UklNyyeJlZnG7cX9yB0JW/Screenshot_4.png)
 
 ## Requirements
 
