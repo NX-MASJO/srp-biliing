@@ -4,6 +4,7 @@ SRP Billing is a FiveM billing resource for QBCore. It provides player and job i
 
 ## Contents
 
+- [Recent updates](#recent-updates)
 - [UI Preview](#ui-preview)
 - [Requirements](#requirements)
 - [Build the NUI](#build-the-nui)
@@ -14,6 +15,14 @@ SRP Billing is a FiveM billing resource for QBCore. It provides player and job i
 - [In-game usage](#in-game-usage)
 - [Invoice and payment flow](#invoice-and-payment-flow)
 - [Troubleshooting](#troubleshooting)
+
+## Recent updates
+
+- Fixed a valid due-date bug where a valid date was returned as a boolean instead of `YYYY-MM-DD`; this prevented `billing_invoices.due_date` inserts from succeeding in MySQL.
+- Added a billing admin command: `/testbilling [amount]` to create a real personal invoice for the admin without creating a sandbox-only transaction.
+- Added the usable `billing_receipt` inventory item: players can use it to view the paid receipt and share it with nearby players.
+- Added Indonesian locale support and a shared receipt preview that matches the compact billing receipt layout.
+- Kept server-side validation as the source of truth for prices, discounts, societies, permissions, and due-date limits.
 
 ## UI Preview
 
