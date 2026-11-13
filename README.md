@@ -129,8 +129,10 @@ Society balances are **not** stored in these tables. They are managed by Renewed
 
 Edit [`config.lua`](./config.lua):
 
-- `Config.Locale`: `en` or `it`.
+- `Config.Locale`: `en` or `id`.
 - `Config.Command`: command used to open billing; default is `/billing`.
+- `Config.TestBillingCommand`: admin-only command to create a pending test invoice to the admin themself; default is `/testbilling`.
+- `Config.TestBillingAmount`: default test invoice amount; can be overridden with the command argument.
 - `Config.AdminAce`: ACE permission name for administrators.
 - `Config.ReceiptItem`: ox_inventory item name; default `billing_receipt`.
 - `Config.ReceiptViewDistance`: distance in game units at which nearby players see a used receipt; default `5.0`.
@@ -205,6 +207,7 @@ The banking adapter expects `addAccountMoney(account, amount)` and `removeAccoun
 - Run `/billing` (or the command configured in `Config.Command`).
 - Use an `ox_target` interaction on a nearby player to open the create-invoice screen with that player's server ID filled in.
 - Use a configured kiosk ped to open the pending-invoice view.
+- Admins can run `/testbilling [amount]` to create a clearly titled `TEST BILLING` personal invoice for themself. The optional amount must be a positive integer no greater than `Config.Limits.MaxAmount`; without it, `Config.TestBillingAmount` is used. Open **Invoices** and pay the test invoice normally to exercise settlement and receipt delivery. It is a real personal invoice, not a sandbox transaction: paying from cash transfers the amount to the admin's bank, while paying from bank debits and credits the same account. The command does not create society commissions or move company funds.
 
 ### Create an invoice
 
@@ -254,4 +257,4 @@ Use `billing_receipt` from ox_inventory. The receipt is shown on your screen and
 - Cancellations are allowed only while an invoice is pending and are rechecked server-side.
 - Job/B2B invoice prices, discounts, totals, permissions, and society accounts are server-validated.
 - The receipt barcode is a visual invoice reference, not a payment credential.
-- English and Italian locales are included in `locales/`; add translations to both the locale key set and UI translations when introducing another language.
+- English and Indonesian locales are included in `locales/`; set `Config.Locale = 'id'` to use Indonesian. Add translations to the locale file and UI translations when introducing another language.

@@ -10,6 +10,7 @@ Locales.en = {
     error_invalid = 'The submitted data is invalid.',
     error_rate = 'Please wait before creating another invoice.',
     success_invoice = 'Invoice created.',
+    success_test_invoice = 'Test invoice #{id} for ${amount} created. Open billing to pay it.',
     success_paid = 'Invoice paid.',
     success_cancelled = 'Invoice cancelled.',
     success_template = 'Template saved.',

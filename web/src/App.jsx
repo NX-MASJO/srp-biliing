@@ -45,45 +45,45 @@ const translations = {
     receiptPreview: 'Receipt preview', tax: 'Tax',
     invoiceStatus: 'Invoice status', count: 'Count'
   },
-  it: {
-    title: 'Gestione fatture', subtitle: 'Fatture, conti aziendali e commissioni',
-    invoices: 'Fatture', create: 'Nuova fattura', templates: 'Modelli lavoro',
-    createTemplate: 'Crea modello', templateEditor: 'Dettagli modello',
-    commissions: 'Commissioni', settings: 'Aspetto', search: 'Cerca fatture...',
-    manageSociety: 'Gestisci società',
-    all: 'Tutti gli stati', pending: 'In sospeso', paid: 'Pagata', cancelled: 'Annullata',
-    empty: 'Nessuna fattura trovata.', amount: 'Importo', titleField: 'Titolo fattura',
-    type: 'Tipo fattura', personal: 'Fattura giocatore', job: 'Fattura lavoro',
-    b2b: 'Fattura aziendale', target: 'ID giocatore vicino', recipient: 'Azienda destinataria',
-    subtotal: 'Importo prima dello sconto', discount: 'Sconto %', due: 'Scadenza',
-    attachments: 'Articoli', addItem: 'Aggiungi articolo', item: 'Articolo', itemName: 'Nome articolo',
-    quantity: 'Quantità', unitPrice: 'Prezzo unitario', lineTotal: 'Totale riga',
-    manualAmount: 'Importo manuale', chooseTemplate: 'Seleziona modello approvato',
-    templateRequired: 'Un responsabile autorizzato deve creare un modello prima di poter fatturare.',
-    templateSelectionRequired: 'Seleziona un modello approvato per continuare.',
-    maxItemsReached: 'Numero massimo di articoli raggiunto.',
-    createButton: 'Crea fattura',
-    bank: 'Bonifico bancario', cash: 'Contanti', pay: 'Paga fattura', cancel: 'Annulla',
-    from: 'Da', to: 'A', receipt: 'Ricevuta', number: 'Fattura #',
-    templateName: 'Nome modello', saveTemplate: 'Salva come modello',
-    applyTemplate: 'Applica modello', delete: 'Elimina', employee: 'Dipendente',
-    commission: 'Commissione', commissionHistory: 'Storico commissioni',
-    payCommission: 'Paga commissione', noCommissions: 'Nessuna commissione.',
-    theme: 'Editor tema live', saveTheme: 'Salva tema', accent: 'Accento',
-    background: 'Sfondo', surface: 'Superficie', text: 'Testo',
-    adminOnly: 'Le impostazioni sono disponibili solo agli amministratori.',
-    close: 'Chiudi', refresh: 'Aggiorna', templateEmpty: 'Nessun modello salvato.',
-    paymentSuccess: 'Fattura pagata.', createSuccess: 'Fattura creata.',
-    actionFailed: 'Operazione non riuscita.', templateSuccess: 'Modello salvato.',
-    commissionSuccess: 'Commissione pagata.', b2bHint: 'Solo i responsabili possono gestire le fatture aziendali.',
-    total: 'Totale', discountLabel: 'Sconto', dueLabel: 'Scadenza', save: 'Salva',
-    archive: 'Archivio fatture', targetRequired: 'Seleziona prima un giocatore con ox_target.',
-    removeConfirm: 'Eliminare questo modello?', orderReceipt: 'RICEVUTA ORDINE',
-    description: 'Descrizione', issued: 'Emessa'
-    ,paidInvoices: 'Fatture pagate', unpaidInvoices: 'Fatture non pagate',
-    refreshNearby: 'Aggiorna vicini', sendInvoice: 'Invia fattura',
-    receiptPreview: 'Anteprima ricevuta', tax: 'Tassa',
-    invoiceStatus: 'Stato fattura', count: 'Numero'
+  id: {
+    title: 'Menu Billing', subtitle: 'Tagihan, rekening perusahaan, dan komisi',
+    invoices: 'Tagihan', create: 'Buat tagihan', templates: 'Template job',
+    createTemplate: 'Buat template', templateEditor: 'Detail template',
+    commissions: 'Komisi', settings: 'Tampilan', search: 'Cari tagihan...',
+    manageSociety: 'Kelola society',
+    all: 'Semua status', pending: 'Menunggu', paid: 'Lunas', cancelled: 'Dibatalkan',
+    empty: 'Tagihan tidak ditemukan.', amount: 'Jumlah', titleField: 'Judul tagihan',
+    type: 'Jenis tagihan', personal: 'Tagihan pemain', job: 'Tagihan job',
+    b2b: 'Tagihan perusahaan', target: 'ID server pemain terdekat', recipient: 'Perusahaan tujuan',
+    subtotal: 'Jumlah sebelum diskon', discount: 'Diskon %', due: 'Jatuh tempo',
+    attachments: 'Item', addItem: 'Tambah item', item: 'Item', itemName: 'Nama item',
+    quantity: 'Kuantitas', unitPrice: 'Harga satuan', lineTotal: 'Total baris',
+    manualAmount: 'Jumlah manual', chooseTemplate: 'Pilih template yang disetujui',
+    templateRequired: 'Pengelola yang berwenang harus membuat template sebelum job ini dapat menagih.',
+    templateSelectionRequired: 'Pilih template yang disetujui untuk melanjutkan.',
+    maxItemsReached: 'Jumlah item maksimum tercapai.',
+    createButton: 'Buat tagihan',
+    bank: 'Transfer bank', cash: 'Tunai', pay: 'Bayar tagihan', cancel: 'Batalkan',
+    from: 'Dari', to: 'Kepada', receipt: 'Struk', number: 'Tagihan #',
+    templateName: 'Nama template', saveTemplate: 'Simpan template',
+    applyTemplate: 'Gunakan template', delete: 'Hapus', employee: 'Karyawan',
+    commission: 'Komisi', commissionHistory: 'Riwayat komisi',
+    payCommission: 'Bayar komisi', noCommissions: 'Belum ada catatan komisi.',
+    theme: 'Editor tema langsung', saveTheme: 'Simpan tema', accent: 'Aksen',
+    background: 'Latar belakang', surface: 'Permukaan', text: 'Teks',
+    adminOnly: 'Pengaturan hanya tersedia untuk administrator server.',
+    close: 'Tutup', refresh: 'Muat ulang', templateEmpty: 'Belum ada template job.',
+    paymentSuccess: 'Tagihan berhasil dibayar.', createSuccess: 'Tagihan berhasil dibuat.',
+    actionFailed: 'Tindakan tidak dapat diselesaikan.', templateSuccess: 'Template berhasil disimpan.',
+    commissionSuccess: 'Komisi berhasil dibayarkan.', b2bHint: 'Hanya pengelola perusahaan yang dapat membuat atau membayar tagihan perusahaan.',
+    total: 'Total', discountLabel: 'Diskon', dueLabel: 'Jatuh tempo', save: 'Simpan',
+    archive: 'Riwayat tagihan', targetRequired: 'Pilih pemain terdekat melalui ox_target terlebih dahulu.',
+    removeConfirm: 'Hapus template ini?', orderReceipt: 'STRUK PEMBAYARAN',
+    description: 'Deskripsi', issued: 'Diterbitkan',
+    paidInvoices: 'Tagihan lunas', unpaidInvoices: 'Tagihan belum lunas',
+    refreshNearby: 'Pilih pemain terdekat', sendInvoice: 'Kirim tagihan',
+    receiptPreview: 'Pratinjau struk', tax: 'Pajak',
+    invoiceStatus: 'Status tagihan', count: 'Jumlah'
   }
 };
 
@@ -241,7 +241,7 @@ export default function App() {
   const [theme, setTheme] = useState(emptyTheme);
   const [form, setForm] = useState({ invoiceType: 'personal', title: '', amount: '', discountPercent: 0, dueDate: '', attachments: [], templateId: '', targetId: '', recipientSociety: '', templateName: '' });
 
-  const locale = dashboard?.locale === 'it' ? 'it' : 'en';
+  const locale = dashboard?.locale === 'id' ? 'id' : 'en';
   const t = translations[locale];
   const invoices = dashboard?.archive || [];
   const filtered = useMemo(() => invoices.filter((invoice) => {
@@ -410,7 +410,7 @@ export default function App() {
   }
 
   if (sharedReceipt) {
-    const receiptT = translations[sharedReceipt.locale === 'it' ? 'it' : 'en'];
+    const receiptT = translations[sharedReceipt.locale === 'id' ? 'id' : 'en'];
     return (
       <main className="receipt-share-shell">
         <section className="receipt-share-window" aria-label={receiptT.receipt}>
@@ -564,7 +564,7 @@ export default function App() {
                     discount_percent: Number(form.discountPercent) || 0,
                     total: Math.max(0, Math.round(invoiceSubtotal * (100 - (Number(form.discountPercent) || 0)) / 100)),
                     due_date: form.dueDate || '—',
-                    created_at: new Date().toLocaleDateString(locale === 'it' ? 'it-IT' : 'en-US'),
+                    created_at: new Date().toLocaleDateString(locale === 'id' ? 'id-ID' : 'en-US'),
                     status: 'pending',
                     attachments: invoiceReceiptLines,
                     canPay: false,
@@ -617,7 +617,7 @@ export default function App() {
                       discount_percent: Number(form.discountPercent) || 0,
                       total: Math.max(0, Math.round(templateSubtotal * (100 - (Number(form.discountPercent) || 0)) / 100)),
                       due_date: '—',
-                      created_at: new Date().toLocaleDateString(locale === 'it' ? 'it-IT' : 'en-US'),
+                      created_at: new Date().toLocaleDateString(locale === 'id' ? 'id-ID' : 'en-US'),
                       status: 'pending',
                       attachments: getReceiptLines(form.attachments),
                       canPay: false,

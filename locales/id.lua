@@ -1,0 +1,25 @@
+Locales = Locales or {}
+Locales.id = {
+    error_generic = 'Permintaan tidak dapat diproses.',
+    error_permission = 'Anda tidak memiliki izin untuk melakukan tindakan ini.',
+    error_player = 'Pemain yang dipilih tidak tersedia.',
+    error_invoice = 'Tagihan ini tidak dapat dibayar atau diubah.',
+    error_money = 'Uang tidak mencukupi.',
+    error_society = 'Transaksi rekening perusahaan gagal.',
+    error_offline_sender = 'Pembuat tagihan harus online agar tagihan personal dapat dibayar.',
+    error_invalid = 'Data yang dikirim tidak valid.',
+    error_rate = 'Tunggu sebelum membuat tagihan berikutnya.',
+    success_invoice = 'Tagihan berhasil dibuat.',
+    success_test_invoice = 'Tagihan uji coba #{id} sebesar ${amount} berhasil dibuat. Buka menu billing untuk membayarnya.',
+    success_paid = 'Tagihan berhasil dibayar.',
+    success_cancelled = 'Tagihan berhasil dibatalkan.',
+    success_template = 'Template berhasil disimpan.',
+    success_commission = 'Komisi berhasil dibayarkan.',
+    error_receipt_inventory = 'Pembayaran berhasil, tetapi tidak ada ruang untuk item struk.',
+    error_receipt_invalid = 'Struk tidak valid atau tagihan belum dibayar.',
+    kiosk = 'Bayar tagihan tertunggak',
+    target_bill = 'Buat tagihan',
+    command = 'Buka billing',
+    invoice_created = 'Anda menerima tagihan baru.',
+    commission_paid = 'Komisi Anda telah dibayarkan.'
+}

@@ -135,7 +135,10 @@ local function validDate(value)
     end
     local maximum = os.time({ year = os.date('*t').year, month = os.date('*t').month, day = os.date('*t').day, hour = 12 })
         + (Config.Limits.MaxDueDays * 86400)
-    return timestamp <= maximum
+    if timestamp > maximum then
+        return false
+    end
+    return value
 end
 
 local function validateAttachments(entries)
@@ -953,6 +956,74 @@ local function saveTheme(source, data)
     ]], { json.encode(theme), playerIdentifier(player) })
     return { ok = true, theme = theme }
 end
+
+RegisterCommand(Config.TestBillingCommand, function(source, args)
+    if source == 0 then
+        print(('[srp-billing] /%s can only be used by an in-game administrator.'):format(Config.TestBillingCommand))
+        return
+    end
+    if not isAdmin(source) then
+        notify(source, BillingLocale('error_permission'), 'error')
+        return
+    end
+
+    local player = playerFor(source)
+    local identifier = playerIdentifier(player)
+    if not identifier then
+        notify(source, BillingLocale('error_generic'), 'error')
+        return
+    end
+
+    local amount = Config.TestBillingAmount
+    if args and args[1] then
+        amount = validInteger(args[1], 1, Config.Limits.MaxAmount)
+        if not amount then
+            notify(source, BillingLocale('error_invalid'), 'error')
+            return
+        end
+    end
+    amount = validInteger(amount, 1, Config.Limits.MaxAmount)
+    if not amount then
+        logError('Config.TestBillingAmount must be a positive integer within Config.Limits.MaxAmount')
+        notify(source, BillingLocale('error_generic'), 'error')
+        return
+    end
+
+    local now = os.time()
+    if createCooldowns[identifier] and now - createCooldowns[identifier] < Config.Limits.CreateCooldownSeconds then
+        notify(source, BillingLocale('error_rate'), 'error')
+        return
+    end
+
+    local fields = validateInvoiceFields({
+        title = 'TEST BILLING',
+        amount = amount,
+        discountPercent = 0,
+        attachments = {
+            { id = 'test-item', label = 'Test billing item', quantity = 1, unitPrice = amount }
+        }
+    })
+    if not fields then
+        notify(source, BillingLocale('error_invalid'), 'error')
+        return
+    end
+
+    local job = jobFor(player)
+    local invoiceId = insertInvoice({
+        'personal', identifier, playerName(player), job and job.name or '', '',
+        identifier, playerName(player), '', fields.title, fields.subtotal,
+        fields.discountPercent, fields.total, fields.dueDate or '',
+        json.encode(fields.attachments)
+    })
+    if not invoiceId then
+        notify(source, BillingLocale('error_generic'), 'error')
+        return
+    end
+
+    createCooldowns[identifier] = now
+    sourceIdentifiers[source] = identifier
+    notify(source, BillingLocale('success_test_invoice', { id = invoiceId, amount = amount }), 'success')
+end, false)
 
 lib.callback.register('srp-billing:createInvoice', createInvoice)
 lib.callback.register('srp-billing:payInvoice', settleInvoice)

@@ -19,7 +19,7 @@ shared_scripts {
     'config.lua',
     'shared/locales.lua',
     'locales/en.lua',
-    'locales/it.lua'
+    'locales/id.lua'
 }
 
 client_scripts {
