@@ -1,0 +1,24 @@
+Locales = Locales or {}
+Locales.en = {
+    error_generic = 'The request could not be completed.',
+    error_permission = 'You are not allowed to perform this action.',
+    error_player = 'The selected player is not available.',
+    error_invoice = 'This invoice cannot be paid or changed.',
+    error_money = 'There are not enough funds.',
+    error_society = 'The society account operation failed.',
+    error_offline_sender = 'The invoice issuer must be online for a personal invoice payment.',
+    error_invalid = 'The submitted data is invalid.',
+    error_rate = 'Please wait before creating another invoice.',
+    success_invoice = 'Invoice created.',
+    success_paid = 'Invoice paid.',
+    success_cancelled = 'Invoice cancelled.',
+    success_template = 'Template saved.',
+    success_commission = 'Commission paid.',
+    error_receipt_inventory = 'Payment completed, but there was no room for the receipt item.',
+    error_receipt_invalid = 'This receipt is invalid or the invoice has not been paid.',
+    kiosk = 'Pay outstanding invoices',
+    target_bill = 'Create invoice',
+    command = 'Open billing',
+    invoice_created = 'You received a new invoice.',
+    commission_paid = 'Your commission has been paid.'
+}

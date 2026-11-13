@@ -1,0 +1,24 @@
+Locales = Locales or {}
+Locales.it = {
+    error_generic = 'Impossibile completare la richiesta.',
+    error_permission = 'Non hai i permessi per eseguire questa azione.',
+    error_player = 'Il giocatore selezionato non è disponibile.',
+    error_invoice = 'Questa fattura non può essere pagata o modificata.',
+    error_money = 'Fondi insufficienti.',
+    error_society = 'Operazione sul conto aziendale non riuscita.',
+    error_offline_sender = 'Il mittente deve essere online per pagare una fattura personale.',
+    error_invalid = 'I dati inviati non sono validi.',
+    error_rate = "Attendi prima di creare un'altra fattura.",
+    success_invoice = 'Fattura creata.',
+    success_paid = 'Fattura pagata.',
+    success_cancelled = 'Fattura annullata.',
+    success_template = 'Modello salvato.',
+    success_commission = 'Commissione pagata.',
+    error_receipt_inventory = "Pagamento completato, ma non c'e spazio per l'oggetto ricevuta.",
+    error_receipt_invalid = 'La ricevuta non è valida o la fattura non è stata pagata.',
+    kiosk = 'Paga le fatture in sospeso',
+    target_bill = 'Crea fattura',
+    command = 'Apri fatturazione',
+    invoice_created = 'Hai ricevuto una nuova fattura.',
+    commission_paid = 'La tua commissione è stata pagata.'
+}
